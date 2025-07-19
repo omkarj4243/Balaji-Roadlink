@@ -1,0 +1,12 @@
+body, html { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+.services-section { background: #fff; padding: 60px 0; text-align: center; }
+.services-section h2 { color: #1a2238; font-size: 2.2rem; margin-bottom: 1.5em; }
+.services-grid { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+.service-card { background: #f4f6fa; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px 24px; width: 260px; transition: transform 0.3s, box-shadow 0.3s; }
+.service-card:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 8px 32px rgba(255,122,0,0.12); }
+.service-icon { font-size: 2.5rem; margin-bottom: 1em; color: #ff7a00; }
+.service-card h3 { color: #1a2238; font-size: 1.3rem; margin-bottom: 0.5em; }
+.service-card p { color: #333; font-size: 1rem; }
+@media (max-width: 900px) {
+  .services-grid { flex-direction: column; align-items: center; gap: 24px; }
+} 

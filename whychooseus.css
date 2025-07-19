@@ -1,0 +1,10 @@
+body, html { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+.whychooseus-section { background: #fff; padding: 60px 0; text-align: center; }
+.whychooseus-section h2 { color: #1a2238; font-size: 2.2rem; margin-bottom: 1.5em; }
+.counters { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+.counter { background: #f4f6fa; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px 24px; width: 200px; transition: transform 0.3s; }
+.counter-value { font-size: 2.5rem; color: #ff7a00; font-weight: bold; }
+.counter p { color: #1a2238; font-size: 1.1rem; margin-top: 0.5em; }
+@media (max-width: 800px) {
+  .counters { flex-direction: column; align-items: center; gap: 24px; }
+} 

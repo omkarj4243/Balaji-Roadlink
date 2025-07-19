@@ -1,0 +1,18 @@
+body, html { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+.testimonials-section { background: #f4f6fa; padding: 60px 0; text-align: center; }
+.testimonials-section h2 { color: #1a2238; font-size: 2.2rem; margin-bottom: 1.5em; }
+.testimonial-slider { position: relative; max-width: 600px; margin: auto; }
+.testimonial { display: none; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px 24px; margin-bottom: 1em; }
+.testimonial.active { display: block; animation: fadeIn 0.7s; }
+.testimonial p { color: #333; font-size: 1.1rem; margin-bottom: 0.5em; }
+.testimonial span { color: #ff7a00; font-weight: bold; }
+.slider-btn { background: #ff7a00; color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 1.5rem; cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); transition: background 0.3s; }
+.slider-btn.prev { left: -50px; }
+.slider-btn.next { right: -50px; }
+.slider-btn:hover { background: #e05d00; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 700px) {
+  .testimonial-slider { max-width: 95vw; }
+  .slider-btn.prev { left: 0; }
+  .slider-btn.next { right: 0; }
+} 

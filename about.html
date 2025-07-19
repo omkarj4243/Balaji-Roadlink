@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Balaji Roadlink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f4f6fa; }
+    header {
+      background: #001f3f;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover { color: #ff6a00; }
+    .about-hero {
+      background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+      padding: 60px 20px 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1.2s;
+    }
+    .about-hero h1 {
+      font-size: 2.8rem;
+      color: #ff6a00;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      animation: fadeInUp 1s 0.2s both;
+    }
+    .about-hero p {
+      font-size: 1.2rem;
+      color: #222;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeInUp 1s 0.5s both;
+    }
+    .about-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(0,31,63,0.08);
+      padding: 40px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      align-items: center;
+      animation: fadeInUp 1.2s 0.3s both;
+    }
+    .about-text { flex: 2; min-width: 250px; }
+    .about-text h2 { color: #001f3f; font-size: 2rem; margin-bottom: 0.5em; }
+    .about-text p { color: #333; font-size: 1.08rem; margin-bottom: 1.2em; }
+    .about-image { flex: 1; min-width: 220px; display: flex; justify-content: center; }
+    .about-image img {
+      width: 100%; max-width: 340px; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); animation: fadeInUp 1.2s 0.5s both;
+    }
+    .mission-vision {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      animation: fadeInUp 1.2s 0.4s both;
+    }
+    .mv-card {
+      background: linear-gradient(120deg, #fff 60%, #ffecd2 100%);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(0,31,63,0.07);
+      padding: 32px 24px;
+      flex: 1;
+      min-width: 260px;
+      text-align: center;
+      animation: fadeInUp 1.2s 0.5s both;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .mv-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(255,106,0,0.10);
+    }
+    .mv-card h3 { color: #ff6a00; margin-bottom: 10px; }
+    .mv-card p { color: #222; font-size: 1.08rem; }
+    .team-section {
+      max-width: 1100px;
+      margin: 40px auto 60px auto;
+      text-align: center;
+      animation: fadeInUp 1.2s 0.5s both;
+    }
+    .team-section h2 { color: #001f3f; margin-bottom: 24px; }
+    .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(0,31,63,0.07);
+      padding: 24px 18px;
+      min-width: 200px;
+      max-width: 240px;
+      text-align: center;
+      animation: fadeInUp 1.2s 0.6s both;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: scale(1.06) translateY(-6px);
+      box-shadow: 0 8px 32px rgba(255,106,0,0.10);
+    }
+    .team-card img {
+      width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,31,63,0.10);
+    }
+    .team-card h4 { color: #ff6a00; margin-bottom: 6px; }
+    .team-card p { color: #222; font-size: 0.98rem; }
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 900px) {
+      .about-section, .mission-vision { flex-direction: column; gap: 24px; }
+      .about-image img { max-width: 90vw; }
+      .team-cards { flex-direction: column; gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Balaji Roadlink</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="owner.html">Owner</a>
+    </nav>
+  </header>
+
+  <div class="about-hero">
+    <h1>About Us</h1>
+    <p>Balaji Roadlink is a trusted name in transportation, delivering excellence for over a decade. Our modern fleet and experienced team ensure your cargo reaches its destination safely and on time. We are committed to reliability, safety, and customer satisfaction across India.</p>
+  </div>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>Founded in 2008, Balaji Roadlink has grown from a single truck operation to a leading logistics provider with a diverse fleet and a reputation for excellence. We specialize in heavy-duty transport, construction freight, and tipper services, serving clients nationwide with a focus on professionalism and integrity.</p>
+      <p>Our mission is to deliver your cargo safely, on time, and with the highest level of service. We invest in the latest vehicles, technology, and training to ensure every journey is smooth and secure.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.91trucks.com/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-11-at-2.11.39-PM.jpeg" alt="Our Fleet">
+    </div>
+  </section>
+
+  <div class="mission-vision">
+    <div class="mv-card">
+      <h3>Our Mission</h3>
+      <p>To provide innovative, reliable, and cost-effective transportation solutions that exceed our clients' expectations and contribute to their success.</p>
+    </div>
+    <div class="mv-card">
+      <h3>Our Vision</h3>
+      <p>To be the most trusted and preferred logistics partner in India, known for our commitment to quality, safety, and customer satisfaction.</p>
+    </div>
+    <div class="mv-card">
+      <h3>Our Values</h3>
+      <p>Integrity, Safety, Customer Focus, Innovation, and Teamwork drive everything we do at Balaji Roadlink.</p>
+    </div>
+  </div>
+
+  <div class="team-section">
+    <h2>Meet Our Team & Fleet</h2>
+    <div class="team-cards">
+      <div class="team-card">
+        <img src="IMG_9451.JPG" alt="Owner">
+        <h4>Mr. Omkar Joshi </h4>
+        <p>Founder & Managing Director</p>
+      </div>
+      <div class="team-card">
+        <img src="WhatsApp Image 2025-07-20 at 00.39.44_9ae4c968.jpg" alt="Fleet Manager">
+        <h4> Pratik Kukade</h4>
+        <p>Fleet Manager</p>
+      </div>
+      <div class="team-card">
+        <img src="WhatsApp Image 2025-07-20 at 00.42.35_8f56fe1e.jpg" alt="Lead Mechanic">
+        <h4> Tushar Pawar</h4>
+        <p>Mechanic Support</p>
+      </div>
+      <div class="team-card">
+        <img src="WhatsApp Image 2025-07-20 at 00.35.26_d4be9203.jpg" alt="Logistics Coordinator">
+        <h4>Rupesh Jaiswal</h4>
+        <p>Logistics Coordinator</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Balaji Roadlink. All rights reserved.</p>
+    <p>Follow us on Facebook | Instagram | LinkedIn</p>
+  </footer>
+</body>
+</html> 

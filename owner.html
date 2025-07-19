@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Info - Balaji Roadlink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+      animation: bgMove 12s linear infinite alternate;
+    }
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    header {
+      background: #001f3f;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover { color: #ff6a00; }
+    .owner-info-section {
+      max-width: 900px;
+      margin: 64px auto 0 auto;
+      padding: 48px 32px;
+      border-radius: 22px;
+      box-shadow: 0 8px 40px rgba(0,31,63,0.13);
+      background: linear-gradient(120deg, #fff 60%, #ffecd2 100%);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.2s 0.2s forwards;
+    }
+    .owner-info-section .owner-photo {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .owner-info-section img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      box-shadow: 0 2px 16px rgba(0,31,63,0.12);
+      border: 5px solid #fff;
+      object-fit: cover;
+      animation: ownerPulse 2.5s infinite alternate;
+    }
+    .owner-info-section .owner-details {
+      flex: 2;
+      min-width: 220px;
+    }
+    .owner-info-section h2 {
+      color: #ff6a00;
+      margin-bottom: 8px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      animation: fadeInUp 1s 0.4s both;
+    }
+    .owner-info-section h4 {
+      color: #001f3f;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      animation: fadeInUp 1s 0.6s both;
+    }
+    .owner-info-section p {
+      color: #222;
+      font-size: 1.08rem;
+      margin-bottom: 22px;
+      animation: fadeInUp 1s 0.8s both;
+    }
+    .owner-info-section .owner-business-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 32px;
+      font-size: 1.05rem;
+      animation: fadeInUp 1s 1s both;
+    }
+    .owner-info-section .owner-business-details a {
+      color: #ff6a00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    @keyframes ownerPulse { 0%{box-shadow:0 2px 16px rgba(0,31,63,0.12);} 100%{box-shadow:0 8px 32px #ff6a0044;} }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    @media (max-width: 800px) {
+      .owner-info-section { flex-direction: column; padding: 32px 10px; gap: 24px; }
+      .owner-info-section img { width: 120px; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Balaji Roadlink</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="owner-info-section">
+    <div class="owner-photo">
+      <img src="1728202670720.jpg" alt="Owner Photo">
+    </div>
+    <div class="owner-details">
+      <h2>Mr.Omkar Joshi</h2>
+      <h4>Founder & Managing Director</h4>
+      <p>With over 15 years of experience in the logistics and transportation industry, Mr. Joshi has built Balaji Roadlink into a trusted name for heavy-duty transport, construction freight, and tipper services. His vision and leadership ensure every client receives reliable, timely, and professional service across India.</p>
+      <div class="owner-business-details">
+        <div><strong>Years in Business:</strong> 15+</div>
+        <div><strong>Fleet Size:</strong> 30+ Trucks & Tippers</div>
+        <div><strong>Service Area:</strong> Pan India</div>
+        <div><strong>Contact:</strong> <a href="tel:+918788794554">+91 8788794554</a></div>
+        <div><strong>Email:</strong> <a href="mailto:info@balajiroadlink.com">info@balajiroadlink.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Balaji Roadlink. All rights reserved.</p>
+    <p>Follow us on Facebook | Instagram | LinkedIn</p>
+  </footer>
+</body>
+</html>

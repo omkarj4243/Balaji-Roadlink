@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balaji Roadlink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    header {
+      background: #001f3f;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      animation: fadeInDown 1s;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #ff6a00;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?truck,transport') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s 0.2s forwards;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s 0.5s forwards;
+    }
+    .hero button {
+      padding: 10px 20px;
+      margin: 5px;
+      background: #ff6a00;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(255,106,0,0.12);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s 0.8s forwards;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero button:hover {
+      background: #ff8533;
+      transform: scale(1.08);
+    }
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: fadeInUp 1s;
+    }
+    @media (max-width: 768px) {
+      header, section {
+        padding: 20px;
+      }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-logo-nav" style="display:flex;align-items:center;gap:18px;">
+      <img src="Logo.png" alt="Balaji Roadlink Logo" class="site-logo" style="height:54px;width:auto;border-radius:12px;box-shadow:0 2px 8px rgba(0,31,63,0.10);background:#fff;">
+      <h1 style="margin:0;font-size:1.7rem;color:#001f3f;letter-spacing:1px;">Balaji Roadlink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="order.html">Order</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="contact.html">Contact</a>
+      <a href="owner.html">Owner</a>
+    </nav>
+  </header>
+
+  <!-- Marquee -->
+  <div class="marquee-container">
+    <div class="marquee">
+      <span>Balaji Roadlink - Trusted Transport Solutions &nbsp; • &nbsp; Balaji Roadlink - Trusted Transport Solutions &nbsp; • &nbsp; Balaji Roadlink - Trusted Transport Solutions</span>
+    </div>
+  </div>
+
+  <!-- Animated SVG Wave Background -->
+  <div style="position:relative;z-index:0;margin-top:18px;">
+    <svg viewBox="0 0 1440 180" style="position:absolute;top:0;left:0;width:100vw;height:120px;z-index:0;" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ff6a00"/>
+          <stop offset="100%" stop-color="#001f3f"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#waveGradient)" fill-opacity="0.7" d="M0,80 C360,180 1080,0 1440,100 L1440,180 L0,180 Z"></path>
+    </svg>
+  </div>
+
+  <div class="hero animated-hero-bg" style="margin-top:40px;height:70vh;min-height:320px;position:relative;z-index:1;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <!-- Hero Background Image -->
+    <img src="https://media.licdn.com/dms/image/v2/C4E1BAQGt3E_yLVLjzg/company-background_10000/company-background_10000/0/1633175391536/ganesh_roadlines_cover?e=2147483647&v=beta&t=xXarXjz4cW_Xs5vwzD2aXeVQafR8bdgh9f6NBHlzezc" alt="AI Truck" class="hero-bg-img">
+    <!-- Dark overlay for readability -->
+    <div class="hero-overlay-bg"></div>
+    <h1 id="typewriter" class="animated-gradient-text" style="background: linear-gradient(90deg,#ff6a00,#001f3f,#ff6a00);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation: gradientMove 3s linear infinite alternate;opacity:1;position:relative;z-index:3;">Balaji Roadlink</h1>
+  </div>
+
+  <style>
+    .marquee-container {
+      width: 100vw;
+      overflow: hidden;
+      background: #ff6a00;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 10;
+      border-bottom: 2px solid #001f3f;
+    }
+    .marquee {
+      display: flex;
+      align-items: center;
+      height: 38px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      animation: marqueeMove 16s linear infinite;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100vw;
+    }
+    @keyframes marqueeMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100vw); }
+    }
+    @keyframes gradientMove {
+      0% {background-position:0% 50%;}
+      100% {background-position:100% 50%;}
+    }
+    @keyframes floatingTruckMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(40px); }
+    }
+    .animated-hero-bg {
+      background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+      transition: background 1s;
+    }
+    .hero-bg-img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      border-radius: 0 0 32px 32px;
+      filter: brightness(0.7) contrast(1.1);
+      transition: height 0.3s;
+    }
+    .hero-overlay-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg,rgba(0,31,63,0.55) 60%,rgba(0,0,0,0.2) 100%);
+      z-index: 1;
+      border-radius: 0 0 32px 32px;
+      pointer-events: none;
+    }
+    @media (max-width: 700px) {
+      .hero-bg-img, .hero-overlay-bg { height: 100%; border-radius: 0 0 18px 18px; }
+      .hero.animated-hero-bg { height: 40vh; min-height: 160px; }
+    }
+  </style>
+  <script>
+    // Animated color gradient background
+    const heroBg = document.querySelector('.animated-hero-bg');
+    let hue = 0;
+    setInterval(() => {
+      hue = (hue + 1) % 360;
+      heroBg.style.background = `linear-gradient(120deg, hsl(${hue}, 100%, 90%) 0%, hsl(${(hue+60)%360}, 100%, 80%) 100%)`;
+    }, 60);
+
+    // Typewriter effect for hero title
+    // const typewriter = document.getElementById('typewriter');
+    // const text = 'Balaji Roadlink';
+    // let i = 0;
+    // function typeWriterAnim() {
+    //   if (i <= text.length) {
+    //     typewriter.textContent = text.substring(0, i);
+    //     i++;
+    //     setTimeout(typeWriterAnim, 90);
+    //   } else {
+    //     typewriter.style.opacity = 1;
+    //   }
+    // }
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        typewriter.style.opacity = 1;
+        typeWriterAnim();
+      }, 400);
+    });
+  </script>
+
+  <!-- Services Preview -->
+  <section style="padding:40px 20px 0 20px;max-width:1100px;margin:auto;">
+    <h2 style="text-align:center;color:#001f3f;margin-bottom:24px;">Our Services</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:center;">
+      <div style="border:1px solid #ccc;padding:20px;border-radius:10px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+        <h3 style="color:#ff6a00;">Construction Freight</h3>
+        <p>Reliable transport for your construction materials and heavy loads.</p>
+      </div>
+      <div style="border:1px solid #ccc;padding:20px;border-radius:10px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+        <h3 style="color:#ff6a00;">Earthmoving</h3>
+        <p>Efficient earth and gravel transport using high-capacity tippers.</p>
+      </div>
+      <div style="border:1px solid #ccc;padding:20px;border-radius:10px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+        <h3 style="color:#ff6a00;">Long-Distance Hauling</h3>
+        <p>Pan-India logistics solutions for large consignments.</p>
+      </div>
+      <div style="border:1px solid #ccc;padding:20px;border-radius:10px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+        <h3 style="color:#ff6a00;">Fleet Rental</h3>
+        <p>Hire our fleet for short-term or project-based needs.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:18px;">
+      <a href="services.html" style="color:#fff;background:#ff6a00;padding:10px 28px;border-radius:5px;text-decoration:none;font-weight:600;box-shadow:0 2px 8px rgba(255,106,0,0.12);transition:background 0.3s;">View All Services</a>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section style="padding:40px 20px 0 20px;max-width:1100px;margin:auto;">
+    <h2 style="text-align:center;color:#001f3f;margin-bottom:24px;">Fleet Gallery</h2>
+    <div class="gallery-preview" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;justify-items:center;">
+      <img src="https://truckcdn.cardekho.com/in/tata/signa-3523-tk/tata-signa-3523-tk-98522.jpg" alt="Tata Signa 3523.TK Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      
+      <img src="https://truckcdn.cardekho.com/in/tata/signa-4825-tk/tata-signa-4825-tk-11573.jpg" alt="Tata Signa 4825.TK Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://www.tatamotors.com/wp-content/uploads/2024/12/press-13aug20-lowres.jpg" alt="Tata Motors Press Image" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <!-- Existing images below -->
+      <!-- <img src="/c%3A/Users/HP/OneDrive/Desktop/Transport/truck1.png" alt="Tata Tipper Truck Night Sky" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="/c%3A/Users/HP/OneDrive/Desktop/Transport/truck2.png" alt="Tata Signa 4825.TK Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="/c%3A/Users/HP/OneDrive/Desktop/Transport/truck3.png" alt="Tata Signa 4830.TK Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://www.tatamotors.com/wp-content/uploads/2021/07/Signa-4830-TK-16-Tyre-Tipper-Truck.jpg" alt="Tata Signa 4830.TK 16‑Tyre Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://www.tatamotors.com/wp-content/uploads/2021/07/Signa-3523-TK-12-Tyre-Tipper-Truck.jpg" alt="Tata Signa 3523.TK 12‑Tyre Tipper Truck" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://source.unsplash.com/300x200/?truck,1" alt="Truck 1" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://source.unsplash.com/301x200/?tippers,2" alt="Tippers" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <img src="https://source.unsplash.com/302x200/?logistics,3" alt="Logistics" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06);"> -->
+    </div>
+    <div style="text-align:center;margin-top:18px;">
+      <a href="gallery.html" style="color:#fff;background:#ff6a00;padding:10px 28px;border-radius:5px;text-decoration:none;font-weight:600;box-shadow:0 2px 8px rgba(255,106,0,0.12);transition:background 0.3s;">View Full Gallery</a>
+    </div>
+  </section>
+
+  <style>
+    .gallery-preview img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+
+  <!-- Call to Action -->
+  <section style="padding:40px 20px 0 20px;max-width:900px;margin:40px auto 0 auto;text-align:center;">
+    <h2 style="color:#ff6a00;margin-bottom:12px;">Ready to Move Your Business?</h2>
+    <p style="margin-bottom:18px;">Contact Balaji Roadlink today for a free quote and experience reliable, professional transportation solutions.</p>
+    <a href="contact.html" style="color:#fff;background:#001f3f;padding:12px 32px;border-radius:5px;text-decoration:none;font-weight:600;box-shadow:0 2px 8px rgba(0,31,63,0.12);transition:background 0.3s;">Contact Us</a>
+  </section>
+
+  <!-- About Us Preview (moved to end) -->
+  <section style="display:flex;flex-wrap:wrap;align-items:center;gap:30px;padding:40px 20px 0 20px;max-width:1100px;margin:auto;">
+    <div style="flex:1;min-width:250px;">
+      <h2 style="color:#001f3f;">About Us</h2>
+      <p>Balaji Roadlink is your trusted partner for heavy-duty logistics, tipper transport, and construction freight. With a strong fleet, experienced team, and a commitment to reliability, we deliver on time, every time. <a href="about.html" style="color:#ff6a00;text-decoration:underline;">Read more &rarr;</a></p>
+    </div>
+    <img src="https://source.unsplash.com/400x250/?fleet,truck" alt="Fleet" style="width:100%;max-width:350px;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+  </section>
+
+  <!-- Owner Info Link (above About Us) -->
+  <div style="text-align:center;margin:40px 0 0 0;">
+    <a href="owner.html" style="display:inline-block;color:#fff;background:#ff6a00;padding:14px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.15rem;box-shadow:0 2px 12px rgba(255,106,0,0.12);transition:background 0.3s,transform 0.3s;letter-spacing:1px;">Meet Our Owner</a>
+  </div>
+
+  <!-- Owner Info Section
+  <section class="owner-info-section" style="max-width:900px;margin:48px auto 0 auto;padding:36px 24px;border-radius:18px;box-shadow:0 4px 32px rgba(0,31,63,0.10);background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);display:flex;flex-wrap:wrap;align-items:center;gap:32px;position:relative;overflow:hidden;animation:fadeInUp 1.2s;">
+    <div style="flex:1;min-width:220px;display:flex;justify-content:center;align-items:center;">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Owner Photo" style="width:140px;height:140px;border-radius:50%;box-shadow:0 2px 16px rgba(0,31,63,0.12);border:4px solid #fff;object-fit:cover;animation:ownerPulse 2.5s infinite alternate;">
+    </div>
+    <div style="flex:2;min-width:220px;">
+      <h2 style="color:#ff6a00;margin-bottom:8px;">Mr. Rajesh Sharma</h2>
+      <h4 style="color:#001f3f;margin-bottom:16px;">Founder & Managing Director</h4>
+      <p style="color:#222;font-size:1.08rem;margin-bottom:18px;">With over 15 years of experience in the logistics and transportation industry, Mr. Sharma has built Balaji Roadlink into a trusted name for heavy-duty transport, construction freight, and tipper services. His vision and leadership ensure every client receives reliable, timely, and professional service across India.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:18px 32px;font-size:1rem;">
+        <div><strong>Years in Business:</strong> 15+</div>
+        <div><strong>Fleet Size:</strong> 30+ Trucks & Tippers</div>
+        <div><strong>Service Area:</strong> Pan India</div>
+        <div><strong>Contact:</strong> <a href="tel:+919876543210" style="color:#ff6a00;text-decoration:none;">+91 98765 43210</a></div>
+        <div><strong>Email:</strong> <a href="mailto:info@balajiroadlink.com" style="color:#ff6a00;text-decoration:none;">info@balajiroadlink.com</a></div>
+      </div>
+    </div>
+    <style>
+      .owner-info-section { opacity:0; transform:translateY(40px); transition:opacity 0.8s, transform 0.8s; }
+      .owner-info-section.visible { opacity:1; transform:none; }
+      @keyframes ownerPulse { 0%{box-shadow:0 2px 16px rgba(0,31,63,0.12);} 100%{box-shadow:0 8px 32px #ff6a0044;} }
+    </style>
+    <script>
+      window.addEventListener('DOMContentLoaded',()=>{
+        setTimeout(()=>{
+          document.querySelector('.owner-info-section').classList.add('visible');
+        }, 400);
+      });
+    </script>
+  </section> -->
+
+  <footer>
+    <p>&copy; 2025 Balaji Roadlink. All rights reserved.</p>
+    <p>Follow us on Facebook | Instagram | LinkedIn</p>
+  </footer>
+  <style>
+    .site-header {
+      background: rgba(0,31,63,0.85);
+      color: white;
+      padding: 14px 40px 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      backdrop-filter: blur(8px);
+      transition: background 0.4s;
+      animation: fadeInDown 1.2s;
+    }
+    .site-logo { transition: box-shadow 0.3s; }
+    .site-logo:hover { box-shadow:0 4px 16px #ff6a00aa; }
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+      letter-spacing: 0.5px;
+      transition: color 0.3s, border-bottom 0.3s, transform 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      position: relative;
+    }
+    header nav a:hover, header nav a.active {
+      color: #ffb347;
+      border-bottom: 2px solid #ff6a00;
+      transform: scale(1.08);
+    }
+    @media (max-width: 900px) {
+      .site-header { flex-direction: column; align-items: flex-start; padding: 10px 10px; }
+      .header-logo-nav { margin-bottom: 10px; }
+      header nav a { margin-left: 10px; font-size: 1rem; }
+    }
+    section, .about-hero, .gallery-preview, .team-section, .mission-vision, .about-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s, transform 0.8s;
+    }
+    section.visible, .about-hero.visible, .gallery-preview.visible, .team-section.visible, .mission-vision.visible, .about-section.visible {
+      opacity: 1;
+      transform: none;
+    }
+    footer {
+      background: linear-gradient(90deg,#001f3f 80%,#ffb347 100%);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+  </style>
+  <script>
+    // Section fade-in on scroll
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('section, .about-hero, .gallery-preview, .team-section, .mission-vision, .about-section');
+      const windowHeight = window.innerHeight;
+      reveals.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < windowHeight - 80) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html> 
